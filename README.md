@@ -19,7 +19,7 @@ After installation, you can use the library in your contract by importing them:
 ```solidity
 pragma solidity ^0.8.0;
 
-import { Bitflags } from "bitflags-solidity/contracts/Bitflags.sol";
+import { Bitflags } from "solidity-bitflags/contracts/Bitflags.sol";
 
 contract Example {
     using Bitflags for bytes32;
