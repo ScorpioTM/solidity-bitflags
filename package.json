@@ -1,0 +1,58 @@
+{
+  "name": "solidity-bitflags",
+  "description": "A gas-efficient Solidity library for managing bitflags.",
+  "version": "1.0.0",
+  "author": "J. M. Vazquez",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScorpioTM/solidity-bitflags.git"
+  },
+  "homepage": "https://github.com/ScorpioTM/solidity-bitflags#readme",
+  "bugs": {
+    "url": "https://github.com/ScorpioTM/solidity-bitflags/issues"
+  },
+  "keywords": [
+    "ethereum",
+    "solidity",
+    "contract",
+    "bitflags"
+  ],
+  "scripts": {
+    "build": "hardhat compile",
+    "clean": "hardhat clean && rimraf \"cache\" \"coverage\" \"coverage.json\"",
+    "prettier": "npm run prettier:sol && npm run prettier:js",
+    "prettier:fix": "npm run prettier:sol:fix && npm run prettier:js:fix",
+    "prettier:js": "prettier \"**/*.js\" --ignore-path .gitignore --check",
+    "prettier:js:fix": "prettier \"**/*.js\" --ignore-path .gitignore --write",
+    "prettier:sol": "prettier \"**/*.sol\" --ignore-path .gitignore --check",
+    "prettier:sol:fix": "prettier \"**/*.sol\" --ignore-path .gitignore --write",
+    "lint": "npm run lint:sol && npm run lint:js",
+    "lint:fix": "npm run lint:sol:fix && npm run lint:js:fix",
+    "lint:js": "npm run prettier:js && eslint \"**/*.js\" --ignore-path .gitignore",
+    "lint:js:fix": "npm run prettier:js:fix && eslint \"**/*.js\" --ignore-path .gitignore --fix",
+    "lint:sol": "npm run prettier:sol && solhint \"**/*.sol\" --ignore-path .gitignore",
+    "lint:sol:fix": "npm run prettier:sol:fix && solhint \"**/*.sol\" --ignore-path .gitignore --fix",
+    "test": "hardhat test",
+    "test:gas": "cross-env REPORT_GAS=true npm run test",
+    "coverage": "hardhat coverage"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "contracts/Bitflags.sol"
+  ],
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "hardhat": "^2.14.0",
+    "prettier": "^2.8.8",
+    "prettier-plugin-solidity": "^1.1.3",
+    "rimraf": "^5.0.0",
+    "solhint": "^3.4.1",
+    "solhint-plugin-prettier": "^0.0.5"
+  }
+}
