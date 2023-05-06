@@ -1,7 +1,7 @@
 {
   "name": "solidity-bitflags",
   "description": "A gas-efficient Solidity library for managing bitflags.",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "J. M. Vazquez",
   "license": "MIT",
   "repository": {
